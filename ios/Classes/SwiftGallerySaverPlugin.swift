@@ -91,7 +91,7 @@ public class SwiftGallerySaverPlugin: NSObject, FlutterPlugin {
                     let createdAssetPlaceholder = assetCreationRequest?.placeholderForCreatedAsset else {
                             return
                     }
-                assetCollectionChangeRequest.addAssets(NSArray(array: [createdAssetPlaceholder]))
+                assetCollectionChangeRequest.addAssets([createdAssetPlaceholder]  as NSFastEnumeration)
             }
         }) { (success, error) in
             if success {
